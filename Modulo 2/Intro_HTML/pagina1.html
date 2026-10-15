@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exemplo de todos os principais comandos HTML">
+    <title>Exemplo de Principais Comandos HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header, nav, footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            background-color: white;
+            max-width: 900px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+        section, article, aside {
+            margin-bottom: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #444;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        form {
+            margin-top: 10px;
+        }
+        input, textarea, select, button {
+            margin: 5px 0;
+            padding: 8px;
+            width: 100%;
+            max-width: 300px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Minha Página HTML de Exemplo</h1>
+    </header>
+
+    <nav>
+        <a href="#texto">Texto</a>
+        <a href="#listas">Listas</a>
+        <a href="#midia">Mídia</a>
+        <a href="#tabela">Tabela</a>
+        <a href="#formulario">Formulário</a>
+    </nav>
+
+    <main>
+        <section id="texto">
+            <h2>Seção de Texto</h2>
+            <p>Este é um parágrafo com algumas <strong>palavras em negrito</strong>, <em>itálico</em> e <u>sublinhadas</u>. <span style="color: blue;">Span usado para colorir parte do texto.</span></p>
+            <hr>
+            <p>Exemplo de quebra de linha:<br>Primeira linha<br>Segunda linha</p>
+            <h3>Subtítulos menores (h3 a h6)</h3>
+            <h4>Exemplo h4</h4>
+            <h5>Exemplo h5</h5>
+            <h6>Exemplo h6</h6>
+        </section>
+
+        <section id="listas">
+            <h2>Listas</h2>
+            <h3>Lista não ordenada:</h3>
+            <ul>
+                <li>Item A</li>
+                <li>Item B</li>
+            </ul>
+            <h3>Lista ordenada:</h3>
+            <ol>
+                <li>Passo 1</li>
+                <li>Passo 2</li>
+            </ol>
+        </section>
+
+        <section id="midia">
+            <h2>Mídia</h2>
+            <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBgY4Wfy9hXIn-GOD3xvwiisF8GM97MiktoA&s" alt="Exemplo de imagem"></p>
+            <p><a href="https://www.example.com" target="_blank">Clique aqui para visitar um link</a></p>
+            <p>Vídeo:</p>
+            <video width="320" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <p>Áudio:</p>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+            <p>Iframe (conteúdo embutido):</p>
+            <!-- <iframe width="300" height="200" src="https://pt.wikipedia.org/wiki/Python"></iframe> -->
+            <iframe src="https://frayfight.com/game/" title="Fray Fight" scrolling="no" allow="autoplay; payment; fullscreen; microphone; clipboard-read; focus-without-user-activation *; screen-wake-lock; gamepad; clipboard-write 'self' https://frayfight.com" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" allowfullscreen loading="eager" style="border: 0px; background-color: rgb(255, 255, 255); width: 10px; height: 10px; min-width: 100%; min-height: 100%;">
+</iframe></br>
+<a href="https://frayfight.com/" target="_blank">Fray Fight</a> is Developed by <a href="https://playsaurus.com" target="_blank">Playsaurus</a> - an idle game development studio.
+                    
+<a href="https://grindcraft.com/" target="_blank">Grindcraft</a> is Developed by <a href="https://playsaurus.com" target="_blank">Playsaurus</a> - an idle game development studio.
+                    
+        </section>
+
+        <section id="tabela">
+            <h2>Tabela</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ana</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>João</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Rodapé da Tabela</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="formulario">
+            <h2>Formulário</h2>
+            <form>
+                <fieldset>
+                    <legend>Cadastro</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Digite seu email">
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="4"></textarea>
+
+                    <label for="opcao">Escolha uma opção:</label>
+                    <select id="opcao">
+                        <option>Opção 1</option>
+                        <option>Opção 2</option>
+                    </select>
+
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <aside>
+            <h3>Conteúdo Relacionado (Aside)</h3>
+            <p>Este é um texto lateral com informações complementares.</p>
+        </aside>
+
+        <article>
+            <h3>Exemplo de Artigo</h3>
+            <p>Um artigo é usado para conteúdos independentes, como postagens de blog ou notícias.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Minha Página HTML</p>
+    </footer>
+
+    <script>
+        console.log("Exemplo de script em JavaScript");
+    </script>
+</body>
+</html>

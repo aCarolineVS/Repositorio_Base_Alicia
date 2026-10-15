@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Galeria — Recanto do Sol{% endblock %}
+{% block content %}
+<section class="page-head">
+    <p class="eyebrow">UM POUCO DO NOSSO MUNDO</p>
+    <h1>Galeria</h1>
+    <p>Conheça um pouco da nossa inspiração.</p>
+</section>
+<section class="gallery">
+{% for title, image in images %}
+<figure><img src="{{ image }}" alt="{{ title }}"><figcaption>{{ title }}</figcaption></figure>
+{% endfor %}
+</section>
+{% endblock %}

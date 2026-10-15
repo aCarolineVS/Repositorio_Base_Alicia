@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Recanto do Sol — Floricultura{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-copy">
+        <div class="badge">✿ FLORES COM CARINHO</div>
+        <h1>Um pedacinho de <span>sol</span> em cada flor.</h1>
+        <p>Buquês, arranjos e plantas escolhidos para transformar momentos simples em memórias especiais.</p>
+        <div class="buttons">
+            <a class="btn primary" href="{{ url_for('flores') }}">Ver nossas flores →</a>
+            <a class="btn light" href="{{ url_for('sobre') }}">Conheça a loja</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <div class="floating-card"><strong>Flores frescas</strong><span>Todos os dias 🌼</span></div>
+    </div>
+</section>
+
+<section class="welcome">
+    <div>
+        <p class="eyebrow">BEM-VINDO AO RECANTO</p>
+        <h2>Flores para celebrar<br>o que importa.</h2>
+    </div>
+    <p>Selecionamos cada flor com cuidado para criar presentes cheios de personalidade. Seja para comemorar, agradecer ou simplesmente espalhar alegria.</p>
+</section>
+
+<section class="featured">
+    <div class="section-title">
+        <div><p class="eyebrow">ESCOLHAS ESPECIAIS</p><h2>Mais queridos</h2></div>
+        <a href="{{ url_for('flores') }}">Ver todos →</a>
+    </div>
+    <div class="product-grid">
+        {% for product in products %}
+        <article class="product">
+            <img src="{{ product.image }}" alt="{{ product.name }}">
+            <div class="product-body"><h3>{{ product.name }}</h3><p>{{ product.description }}</p><strong>{{ product.price }}</strong></div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="quote">
+    <span>❀</span>
+    <h2>“Onde florescem flores,<br>também floresce alegria.”</h2>
+</section>
+{% endblock %}

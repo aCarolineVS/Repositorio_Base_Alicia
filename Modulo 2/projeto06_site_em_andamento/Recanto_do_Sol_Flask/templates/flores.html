@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Flores — Recanto do Sol{% endblock %}
+{% block content %}
+<section class="page-head">
+    <p class="eyebrow">NOSSO CATÁLOGO</p>
+    <h1>Flores & presentes</h1>
+    <p>Escolha uma composição para deixar o dia de alguém ainda mais bonito.</p>
+</section>
+<section class="product-grid catalog">
+{% for product in products %}
+<article class="product">
+    <img src="{{ product.image }}" alt="{{ product.name }}">
+    <div class="product-body"><span class="tag">FLORES</span><h3>{{ product.name }}</h3><p>{{ product.description }}</p><strong>{{ product.price }}</strong><a class="small-btn" href="{{ url_for('contato') }}">Tenho interesse</a></div>
+</article>
+{% endfor %}
+</section>
+{% endblock %}
